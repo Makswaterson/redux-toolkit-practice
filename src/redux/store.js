@@ -13,7 +13,7 @@ import storage from 'redux-persist/lib/storage';
 import { todosReducer } from './todosSlise';
 
 const persistConfig = {
-  key: 'root',
+  key: 'todos',
   version: 1,
   storage,
 };

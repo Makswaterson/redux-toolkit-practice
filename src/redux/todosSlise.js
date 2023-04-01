@@ -5,11 +5,10 @@ const todosInitialState = {
 };
 
 const todosSlice = createSlice({
-  // Имя слайса
   name: 'todos',
-  // Начальное состояние редюсера слайса
+
   initialState: todosInitialState,
-  // Объект редюсеров
+
   reducers: {
     addTodos(state, action) {
       state.todos = [...state.todos, action.payload];
@@ -20,9 +19,8 @@ const todosSlice = createSlice({
   },
 });
 
-// Генераторы экшенов
 export const { addTodos, deleteTodos } = todosSlice.actions;
-// Редюсер слайса
+
 export const todosReducer = todosSlice.reducer;
 
 export const getAllTodos = state => state.todos;
